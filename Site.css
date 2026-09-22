@@ -1,0 +1,224 @@
+html {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	user-select: none;
+}
+
+body {
+	min-height: 100%;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-size: 11pt;
+	display: flex;
+	flex-direction: column; /*içerikleri yukarıdan aşağıya sıralama*/
+	background-image: url('Images/background.png');
+	background-size: cover;
+	background-position: center;
+}
+
+#divHeader {
+	display:flex;
+	align-items: center;
+	background: rgba(255,255,255,0.90);
+	padding: 0px 10vw;
+}
+
+#divBody {
+	display:flex;
+	flex:100%;
+}
+
+#divFooter {
+	display:flex;
+	background: rgba(255,255,255,0.90);
+	padding: 0px 10vw;
+}
+
+nav{
+	margin: 1vw 0px 0px auto;
+	padding: 10px;
+}
+
+nav ul{
+	text-decoration: none;
+	display: flex;
+}
+
+nav ul li{
+	margin: 0px 50px;
+	font-size: 11pt;
+	font-family: sans-serif;
+	font-weight: 600;
+	color: black;
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:link,
+a:active,
+a:visited{
+	text-decoration: none;
+	outline: none;
+	border: none;
+	color:#000;
+}
+
+a:hover{
+	color:#666;
+}
+
+#divHeader #divLogo{
+		font-size: 2vw;
+		font-weight: 900;
+		font-family: sans-serif;
+		padding: 10px;
+}
+
+#divBody #divText{
+	font-size: 15vw;
+	font-weight: 900;
+	font-family: sans-serif;
+	position: absolute; /*belgeye göre kendini konumlandırır */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* nesneyi kaydırır */
+	padding: 20px;
+	border: none;
+	color: rgb(255, 255, 255, 0.9);
+}
+
+#divBody #divAbout{
+	padding: 50px 10vw;
+    font-size: 11pt;
+    font-family: sans-serif;
+	font-style: italic;
+    color: black;
+    width: 100%;
+}
+
+#divBody #divPlaces{
+	padding: 50px 10vw;
+    font-size: 9pt;
+    font-family: sans-serif;
+    color: black;
+    width: 100%;
+}
+
+#divPlaces .divPBag{
+	margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+	display:flex;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+
+#divPlaces .divPBag .divPImg{
+	border: 5px solid white;
+    width: 20vw;
+    height: 15vw;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#divPlaces .divPBag .divPText{
+    color: white;
+    padding: 10px;
+    width: 50vw;
+	margin-left:10px;
+	padding-bottom: 50px; /*içeriğin  alt kısmında boşluk bırakır */
+	display:none; /* içeriği gizler */
+	position:relative;
+}
+
+#divPlaces .divPBag .divPLink{
+    position:absolute;
+	bottom:10px;
+	right: 10px;
+}
+
+#divPlaces .divPBag .divPLink a{
+    color: white;
+    width: 100%;
+	font-weight: bold;
+}
+
+#divPlaces .divPBag .divPLink a:hover{
+    color: #EEE;
+}
+
+#divFooter footer {
+	width: 100%;
+	display: flex;
+}
+
+#footerSocial table, #footerContact table {
+	text-align: left;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 9pt;
+	font-family: sans-serif;
+	color: black;
+}
+
+.SocialLogo {
+	width:12px;
+	margin-left:5px;
+}
+
+.SocialLogo-Instagram {
+	content: url("Images/instagram.png");
+}
+
+.SocialLogo-Linkedin {
+	content: url("Images/linkedin.png");
+}
+
+.zoomPBag{
+	padding: 10px 10vw;
+    font-size: 11pt;
+    font-family: sans-serif;
+    color: black;
+}
+
+.zoomPBag .zoomPImg{
+	border: 1px solid black;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.zoomPBag .zoomPText{
+    padding: 10px;
+    width: 100%;
+	margin-top:25px;
+	padding-bottom: 100px;
+}
+
+#footerContact {
+	align-self: center;
+	font: 9pt sans-serif;
+	color: #333;
+}
+
+@media (max-width: 700px) {
+	#divHeader, #divFooter { padding: 0 5vw; }
+	#divHeader { flex-wrap: wrap; }
+	#divHeader #divLogo { font-size: 7vw; }
+	nav { margin: 0 0 0 auto; padding: 12px 0; }
+	nav ul li { margin: 0 10px; font-size: 10pt; }
+	#divBody #divText { font-size: 18vw; }
+	#divPlaces .divPBag { margin-left: 0; flex-direction: column; }
+	#divPlaces .divPBag .divPImg { width: 100%; height: 45vw; box-sizing: border-box; }
+	#divPlaces .divPBag .divPText { width: auto; margin-left: 0; }
+	#divFooter footer { flex-direction: column; }
+}
